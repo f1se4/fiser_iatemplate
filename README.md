@@ -6,6 +6,7 @@ I have created this template for personal use.
 - FlowChart
 - Prism (at the moment only css, code highlightning seems unavailable) - **Help will be welcomed**
 - DiagramChart in progress (same solution as flowChart)
+- PlantUML (*In progress*)
 
 ## Other features
 - Nice Title Page
