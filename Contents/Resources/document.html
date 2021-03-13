@@ -2,7 +2,6 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-    <link rel="stylesheet" media="all" href="main.css">
     <link rel="stylesheet" media="all" href="normalize.css">
     <link rel="stylesheet" media="all" href="core.css">
     <link rel="stylesheet" media="all" href="style.css">
@@ -51,14 +50,17 @@
                     //element.setAttribute("style","display:block;width:10px")
                     element.parentNode.replaceChild(div_new, element)
                     //document.getElementById(div_new_id).setAttribute("style","display:block;width:20px")
-                    chart.drawSVG(div_new_id)
+                    chart.drawSVG(div_new_id,{
+                        //'maxWidth': 10,//ensures the flowcharts fits within a certian width
+                        //'scale':0.8
+                    })
                     }
 			});
 		});
 	</script>
 
-    <script src="prism/prism.js"></script>
     <link href="prism/prism.css" rel="stylesheet" />
+    <script src="prism/prism.js"></script>
 
 	<!-- Mermaid add-on -->
 	<script src="mermaid/mermaid.js"></script>
