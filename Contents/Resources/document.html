@@ -22,18 +22,12 @@
     <script type="text/javascript" src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
     <link rel="stylesheet" media="all" href="https://printjs-4de6.kxcdn.com/print.min.css">
 
+
+    <link href="prism/prism.css" rel="stylesheet" />
+
+
 	<script>
 		document.addEventListener("DOMContentLoaded", function(){
-            // processHighlight
-			//document.body.addEventListener('ia-writer-change', function(event) {
-			//	var codeBlocks = document.querySelectorAll('code.python');
-			//	[].forEach.call(codeBlocks, function(codeBlock) {
-			//		codeBlock.className = codeBlock.className.split(' ').map(function(className) {
-			//			return 'language-' + className;
-			//		}).join(' ');
-			//	});
-			//	Prism.highlightAll();
-			//});
 			document.body.addEventListener('ia-writer-change', function(event) {
                 var elements = document.getElementsByClassName('flow')
                 for (var i = 0, l = elements.length; i < l; i++) {
@@ -46,26 +40,25 @@
                     var div_new = document.createElement('div')
                     var div_new_id = 'flowchart_' + i
                     div_new.setAttribute('id', div_new_id)
-                    //document.getElementById(div_new).setAttribute("style","display:block;width:500px")
-                    //element.setAttribute("style","display:block;width:10px")
                     element.parentNode.replaceChild(div_new, element)
-                    //document.getElementById(div_new_id).setAttribute("style","display:block;width:20px")
                     chart.drawSVG(div_new_id,{
-                        //'maxWidth': 10,//ensures the flowcharts fits within a certian width
+                        'maxWidth': 10,//ensures the flowcharts fits within a certian width
                         //'scale':0.8
                     })
                     }
 			});
+
 		});
 	</script>
-
-    <link href="prism/prism.css" rel="stylesheet" />
-    <script src="prism/prism.js"></script>
 
 	<!-- Mermaid add-on -->
 	<script src="mermaid/mermaid.js"></script>
 	<script>mermaid.initialize({startOnLoad:true});</script>
     
 </head>
-<body data-document>&nbsp;</body>
+<body data-document>&nbsp;
+    <footer>
+        <script src="prism/prism.js"></script>
+    </footer>
+</body>
 </html>

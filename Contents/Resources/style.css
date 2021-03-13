@@ -640,3 +640,7 @@ ol .task-list-item {
   margin-left: -14px;
   padding-left: 14px;
 }*/
+
+div .flow {
+  width:auto;
+}
