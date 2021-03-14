@@ -1,0 +1,98 @@
+/* github-markdown, github-markdown-mobile are extracted using https://github.com/sindresorhus/generate-github-markdown-css */
+/* .pl styles have been removed, because they refer to prettylights syntax highlighter https://github.com/primer/github-syntax-theme-generator */
+
+@import 'github-markdown.css' screen and (min-width: 520px), print;
+
+@import 'github-markdown-mobile.css' screen and (max-width: 520px);
+
+@import 'github-markdown-night-mode.css' screen;
+
+html {
+  background-color: white;
+}
+
+.markdown-body {
+  padding-top: 0;
+  padding-bottom: 0;
+  --horizontal-padding: 0;
+  padding-left: var(--horizontal-padding);
+  padding-right: var(--horizontal-padding);
+}
+
+@supports (padding: constant(safe-area-inset-left)) and (padding: constant(safe-area-inset-right)) {
+  .markdown-body {
+      padding-left: calc(var(--horizontal-padding) + constant(safe-area-inset-left));
+      padding-right: calc(var(--horizontal-padding) + constant(safe-area-inset-right));
+  }
+}
+
+@supports (padding: env(safe-area-inset-left)) and (padding: env(safe-area-inset-right)) {
+  .markdown-body {
+    padding-left: calc(var(--horizontal-padding) + env(safe-area-inset-left));
+    padding-right: calc(var(--horizontal-padding) + env(safe-area-inset-right));
+  }
+}
+
+@media screen {
+  .markdown-body {
+    margin: 0 auto;
+    max-width: calc(980px - 90px);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .markdown-body {
+    --horizontal-padding: 15px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .markdown-body {
+    --horizontal-padding: 45px;
+  }
+}
+
+@media screen {
+  .markdown-body pre {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media print {
+  .markdown-body {
+    --horizontal-padding: 75px;
+  }
+  .markdown-body pre code {
+    white-space: pre-wrap;
+  }
+}
+
+/* Fix for paragraph list items. GitHub embeds input into the first paragraph, iA Writer doesn’t. */
+.markdown-body .task-list-item {
+  clear: left;
+}
+.markdown-body .task-list-item-checkbox {
+  float: left; /* takes out of flow */
+  height: 1.5rem; /* same as line height */
+}
+
+/* GitHub doesn't process figures and images aren't given padding */
+.markdown-body figure {
+  -webkit-margin-before: 0em; /* override user-agent styles */
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.markdown-body figcaption {
+	margin-bottom: 16px; /* same as between paragraphs */
+}
+
+.markdown-body img {
+  height: auto;
+}
+
+/* give elements on new pages the same top margin as first element of document */
+.markdown-body .page-break + * {
+  margin-top: 0;
+}

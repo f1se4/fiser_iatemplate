@@ -5,26 +5,13 @@
     <link rel="stylesheet" media="all" href="normalize.css">
     <link rel="stylesheet" media="all" href="core.css">
     <link rel="stylesheet" media="all" href="style.css">
+    <link rel="stylesheet" media="all" href="github.css">
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
 
     <!-- Flow chart support -->
     <script type="text/javascript" src="raphael/raphael.min.js"></script>
     <script type="text/javascript" src="flowchart/flowchart.min.js"></script>
-
-    <!-- sequence chart support -->
-    <script type="text/javascript" src="webfontloader/webfontloader.js"></script>
     <script type="text/javascript" src="snap.svg/snap.svg-min.js"></script>
-    <script type="text/javascript" src="underscore/underscore-min.js"></script>
-    <script type="text/javascript" src="sequencechart/sequence-diagram-min.js"></script>
-    <link rel="stylesheet" media="all" href="sequencechart/sequence-diagram-min.css">
-
-    <!--Custom print  -->
-    <script type="text/javascript" src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
-    <link rel="stylesheet" media="all" href="https://printjs-4de6.kxcdn.com/print.min.css">
-
-
-    <link href="prism/prism.css" rel="stylesheet" />
-    <script src="prism/prism.js"></script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function(){
@@ -47,14 +34,13 @@
                     })
                     }
 			});
-
 		});
 	</script>
 
 	<!-- Mermaid add-on -->
 	<script src="mermaid/mermaid.js"></script>
-	<script>mermaid.initialize({startOnLoad:true});</script>
+	<script>mermaid.initialize({startOnLoad:true,theme:'forest'});</script>
     
 </head>
-<body data-document>&nbsp;</body>
+<body class="markdown-body" data-document>&nbsp;</body>
 </html>
