@@ -1,84 +1,34 @@
-@import "compass/css3";
-
-@import "compass/css3";
-@import url(https://fonts.googleapis.com/css?family=Patua+One|Open+Sans);
-
-* { 
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box; 
-}
-
-body {
-  background:#353a40;
-}
-
 table {
-  border-collapse: separate;
-  background:#fff;
-  @include border-radius(5px);
-  margin:50px auto;
-  @include box-shadow(0px 0px 5px rgba(0,0,0,0.3));
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
 }
-
-thead {
-  @include border-radius(5px);
+table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
 }
-
-thead th {
-  font-family: 'Patua One', cursive;
-  font-size:16px;
-  font-weight:400;
-  color:#fff;
-  @include text-shadow(1px 1px 0px rgba(0,0,0,0.5));
-  text-align:left;
-  padding:20px;
-  @include background-image(linear-gradient(#646f7f, #4a5564));
-  border-top:1px solid #858d99;
+table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
   
-  &:first-child {
-   @include border-top-left-radius(5px); 
+  code.python {
+    display:block;
+    font:normal 12px/22px Monaco,Monospace !important;
+    color:#CFDBEC;
+    background-color:whitesmoke;
+    background-image:-webkit-repeating-linear-gradient(top, #ffffff 0px, #ffffff 22px, #b8d1e4 22px, #b8d1e4 44px);
+    background-image:-moz-repeating-linear-gradient(top, #ffffff 0px, #ffffff 22px, #b8d1e4 22px, #b8d1e4 44px);
+    background-image:-ms-repeating-linear-gradient(top, #ffffff 0px, #ffffff 22px, #b8d1e4 22px, #b8d1e4 44px);
+    background-image:-o-repeating-linear-gradient(top, #ffffff 0px, #ffffff 22px, #b8d1e4 22px, #b8d1e4 44px);
+    background-image:repeating-linear-gradient(top, #ffffff 0px, #ffffff 22px, #b8d1e4 22px, #b8d1e4 44px);
+    padding:0em 0em;
+    overflow:auto;
   }
-
-  &:last-child {
-    @include border-top-right-radius(5px); 
-  }
-}
-
-tbody tr td {
-  font-family: 'Open Sans', sans-serif;
-  font-weight:400;
-  color:#5f6062;
-  font-size:13px;
-  padding:20px 20px 20px 20px;
-  border-bottom:1px solid #e0e0e0;
-  
-}
-
-tbody tr:nth-child(2n) {
-  background:#f0f3f5;
-}
-
-tbody tr:last-child td {
-  border-bottom:none;
-  &:first-child {
-    @include border-bottom-left-radius(5px);
-  }
-  &:last-child {
-    @include border-bottom-right-radius(5px);
-  }
-}
-
-tbody:hover > tr td {
-  @include opacity(0.5);
-  
-  /* uncomment for blur effect */
-  /* color:transparent;
-  @include text-shadow(0px 0px 2px rgba(0,0,0,0.8));*/
-}
-
-tbody:hover > tr:hover td {
-  @include text-shadow(none);
-  color:#2d2d2d;
-  @include opacity(1.0);
-}

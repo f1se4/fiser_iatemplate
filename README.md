@@ -4,9 +4,7 @@ I have created this template for personal use.
 ## Plugins included
 - Mermaid
 - FlowChart
-- Prism (at the moment only css, code highlightning seems unavailable) - **Help will be welcomed**
-- DiagramChart in progress (same solution as flowChart)
-- PlantUML (*In progress*)
+- Math Latex Syntax
 
 ## Other features
 - Nice Title Page
