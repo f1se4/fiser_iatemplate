@@ -2,4 +2,12 @@
 I have created this template for personal use.
 
 ## Plugins included
-1- Mermaid
+- Mermaid
+- FlowChart
+- Prism (at the moment only css, code highlightning seems unavailable) - **Help will be welcomed**
+- DiagramChart in progress (same solution as flowChart)
+- PlantUML (*In progress*)
+
+## Other features
+- Nice Title Page
+- Some changes over footer page adding full line
