@@ -81,7 +81,6 @@
   src: local("iAWriterMono-BoldItalic5");
 }
 
-
 /* BASE */
 
 html,
@@ -176,82 +175,80 @@ body > *:first-child {
 /* iOS gutters responsive adjustments */
 
 body {
-    --padding: 10px;
-    padding-left: var(--padding);
-    padding-right: var(--padding);
+  --padding: 10px;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
 }
 
 @supports (padding: constant(safe-area-inset-left)) and (padding: constant(safe-area-inset-right)) {
-    body {
-        padding-left: calc(var(--padding) + constant(safe-area-inset-left));
-        padding-right: calc(var(--padding) + constant(safe-area-inset-right));
-    }
+  body {
+      padding-left: calc(var(--padding) + constant(safe-area-inset-left));
+      padding-right: calc(var(--padding) + constant(safe-area-inset-right));
+  }
 }
 
 @supports (padding: env(safe-area-inset-left)) and (padding: env(safe-area-inset-right)) {
-    body {
-        padding-left: calc(var(--padding) + env(safe-area-inset-left));
-        padding-right: calc(var(--padding) + env(safe-area-inset-right));
-    }
+  body {
+      padding-left: calc(var(--padding) + env(safe-area-inset-left));
+      padding-right: calc(var(--padding) + env(safe-area-inset-right));
+  }
 }
 
 /* iPhone 6 */
 @media screen and (min-width: 375px) {
-  body {
-    --padding: 22px;
-  }
+body {
+  --padding: 22px;
+}
 }
 
 /* iPhone 6+ */
 @media screen and (min-width: 414px) {
-  body {
-    --padding: 24px;
-  }
+body {
+  --padding: 24px;
+}
 }
 
 @media screen and (min-width: 480px) {
-  body {
-    --padding: 32px;
-  }
+body {
+  --padding: 32px;
+}
 }
 
 @media screen and (min-width: 600px) {
-  body {
-    --padding: 48px;
-  }
+body {
+  --padding: 48px;
+}
 }
 
 /* iPad triggered on 760 not 768 to work with fonts */
 @media screen and (min-width: 760px) and (max-device-width: 1024px) {
-  body {
-    --padding: 70px;
-  }
+body {
+  --padding: 70px;
+}
 }
 
 /* Responsive adjustments for OS X */
 @media screen and (min-device-width: 1152px) {
-  html {
-    background-color: #fcfcfc;
-  }
+html {
+  background-color: #fcfcfc;
+}
 
-  body {
-    --padding: 24px;
-  }
+body {
+  --padding: 24px;
+}
 }
 
 @media screen and (min-width: 480px) and (min-device-width: 1152px) {
-  body {
-    --padding: 48px;
-  }
+body {
+  --padding: 48px;
+}
 }
 
 @media screen and (min-width: 640px) and (min-device-width: 1152px) {
-  body {
-    --padding: 72px;
-  }
+body {
+  --padding: 72px;
 }
-
-
+}
 /* Headings */
 
 body > h1:first-child {
@@ -365,7 +362,6 @@ hr {
   }
 }
 
-
 /* table-layout: fixed; produces equal-width columns, which is generally a better result */
 table {
   table-layout: fixed;
@@ -426,13 +422,13 @@ td:last-of-type {
 
 /* Code */
 
-pre,
+/* pre, sergi
 code,
 kbd {
   border-radius: 2px;
   white-space: pre-wrap;
   background-color: rgba(36, 36, 36, 0.055);
-}
+} */
 
 pre code {
   background-color: transparent;
@@ -477,79 +473,79 @@ kbd {
 :-webkit-any(h1, h2, h3, h4, h5, h6) > code, kbd {
   line-height: normal;
 }
-
 /* Print styles */
 @media print {
 
-  *,
-  *:before,
-  *:after {
-    color: #000 !important; /* black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  html {
-    margin: 0; /* Override for safety */
-    padding: 0; /* Override for safety */
-    font-size: 9pt; /* ← needs to be set per template to counter responsive typography */
-    background: transparent !important; /* Only on html due to checkboxes */
-  }
-
-  body {
-    margin: 0 auto; /* Set all values for safety */
-    padding: 12pt 50pt; /* Set all values for safety */
-  }
-
-  /* Make sure there’s no margin-top on first element */
-  body > :first-child {
-    margin-top: 0;
-  }
-
-  /* h6 excluded as the page-break-inside rule conflicts with page-initial inline h6 when printed */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  img,
-  figure {
-    page-break-inside: avoid;
-    page-break-after: avoid; /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=5097 */
-  }
-
-  p {
-    /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=39735 */
-    widows: 3;
-    orphans: 3;
-  }
-
-  hr {
-    border-bottom-color: #000 !important;
-  }
-
-  /* Underline on superscript footnote number, which when clicked shows an error */
-  .footnote {
-    text-decoration: none;
-  }
-
-  /* Underline for table of contents on printed pages */
-  .TOC a {
-    text-decoration: none;
-  }
-
-  /* Link which allows you to go back to the text from footnote—useless on a printed page */
-  .reversefootnote {
-    display: none;
-  }
-
-  .tooltip:after {
-    display: none;
-  }
-}
-
-
-/* OBJECTS */
+  /*  *,
+   *:before,
+   *:after {
+     color: #000 !important; / * black prints faster * /
+     box-shadow: none !important;
+     text-shadow: none !important;
+   } */
+ 
+   html {
+     margin: 0; /* Override for safety */
+     padding: 0; /* Override for safety */
+     font-size: 9pt; /* ← needs to be set per template to counter responsive typography */
+     background: transparent !important; /* Only on html due to checkboxes */
+   }
+ 
+   body {
+     margin: 0 auto; /* Set all values for safety */
+     padding: 12pt 50pt; /* Set all values for safety */
+   }
+ 
+   /* Make sure there’s no margin-top on first element */
+   body > :first-child {
+     margin-top: 0;
+   }
+ 
+   /* h6 excluded as the page-break-inside rule conflicts with page-initial inline h6 when printed */
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   img,
+   figure {
+     page-break-inside: avoid;
+     page-break-after: avoid; /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=5097 */
+   }
+ 
+   p {
+     /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=39735 */
+     widows: 3;
+     orphans: 3;
+   }
+ 
+   hr {
+     border-bottom-color: #000 !important;
+   }
+ 
+   /* Underline on superscript footnote number, which when clicked shows an error */
+   .footnote {
+     text-decoration: none;
+   }
+ 
+   /* Underline for table of contents on printed pages */
+   .TOC a {
+     text-decoration: none;
+   }
+ 
+   /* Link which allows you to go back to the text from footnote—useless on a printed page */
+   .reversefootnote {
+     display: none;
+   }
+ 
+   .tooltip:after {
+     display: none;
+   }
+ }
+ 
+ /*****************************************************************************/
+ 
+ /* OBJECTS */
 
 /* Center Headings
    Center h1-h5 headings, via the Centered Headings setting */
@@ -559,12 +555,12 @@ kbd {
 
 /* Indent Paragraphs
    Indent the first line of sequential paragraphs, via the Indent Paragraph setting */
-.indent-paragraphs p + p {
-  margin-top: 0;
-  text-indent: 1.2em; /* Tweaked per template */
-}
+   .indent-paragraphs p + p {
+    margin-top: 0;
+    text-indent: 1.2em; /* Tweaked per template */
+  }
 
-/* Night Mode */
+  /* Night Mode */
 
 .night-mode,
 .night-mode a {
@@ -677,7 +673,7 @@ ul .task-list-item:before {
   margin: 0 0 0 -1.6rem; /* 0s to overwrite user agent styles */
   border: none; /* Otherwise iPhone draws a border */
   font-size: 1rem; /* Required to overwrite user agent styles, set to same as p */
-  background-image: url('box.svg');
+  background-image: url('../images/box.svg');
   background-repeat: no-repeat;
   background-position: 40% 40%; /* x=roughly align with bullets and between ordinal and text, y=4px down to roughly align to baseline. */
   background-size: 50% 50%; /* Desired size 12px / 21px line-height for Preview */
@@ -688,26 +684,26 @@ ul .task-list-item:before {
 }
 
 .task-list-item-checkbox:checked {
-  background-image: url('check.svg');
+  background-image: url('../images/check.svg');
 }
 
 /* Checkbox color in Night Mode (=text color) */
 .night-mode .task-list-item-checkbox {
-  background-image: url('box-night-mode-ios.svg');
+  background-image: url('../images/box-night-mode-ios.svg');
 }
 
 .night-mode .task-list-item-checkbox:checked {
-  background-image: url('check-night-mode-ios.svg');
+  background-image: url('../images/check-night-mode-ios.svg');
 }
 
 /* OS X color */
 @media screen and (min-device-width: 1152px) {
   .night-mode .task-list-item-checkbox {
-    background-image: url('box-night-mode-osx.svg');
+    background-image: url('../images/box-night-mode-osx.svg');
   }
 
   .night-mode .task-list-item-checkbox:checked {
-    background-image: url('check-night-mode-osx.svg');
+    background-image: url('../images/check-night-mode-osx.svg');
   }
 }
 
@@ -731,35 +727,6 @@ ul .task-list-item:before {
 address {
     text-align: right;
     white-space: pre;
-}
-
-
-/* Smart Table ToolTips */
-
-.tooltip {
-    position: relative;
-}
-
-table .tooltip:after {
-    font-size: 10px;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0);
-    border-radius: 2px;
-    top: calc(50% - 10px);
-    left: 0%;
-    content: attr(id);
-    padding: 2px 4px;
-    position: absolute;
-    z-index: 98;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-table:hover .tooltip:after {
-    /* Tooltips are always visible, and use transparent background and text color unless table is hovered because WebKit has a bug where table caption jumps around if table cells get a new abolutely positioned element inside. */
-    color: #fff;
-    background-color: #000;
 }
 
 /* Automatic Heading Numbering */

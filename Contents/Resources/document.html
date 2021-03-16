@@ -2,45 +2,45 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-    <link rel="stylesheet" media="all" href="normalize.css">
-    <link rel="stylesheet" media="all" href="core.css">
-    <link rel="stylesheet" media="all" href="style.css">
-    <link rel="stylesheet" media="all" href="personal.css">
+    <link rel="stylesheet" media="all" href="assets/normalize.css">
+    <link rel="stylesheet" media="all" href="assets/core.css">
+    <link rel="stylesheet" media="all" href="assets/style.css">
+    <link rel="stylesheet" media="all" href="assets/personal.css">      
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
 
+    <!-- Jquery always the first -->
+<!--     <script src="modules/sequence/jquery.min.js"></script> -->
+
     <!-- Flow chart support -->
-    <script type="text/javascript" src="raphael/raphael.min.js"></script>
-    <script type="text/javascript" src="flowchart/flowchart.min.js"></script>
-    <script type="text/javascript" src="snap.svg/snap.svg-min.js"></script>
+<!--     <script type="text/javascript" src="modules/snap.svg/snap.svg-min.js"></script>
+    <script type="text/javascript" src="modules/raphael/raphael.min.js"></script>
+    <script type="text/javascript" src="modules/flowchart/flowchart.min.js"></script> -->
 
-	<script>
-		document.addEventListener("DOMContentLoaded", function(){
-			document.body.addEventListener('ia-writer-change', function(event) {
-                var elements = document.getElementsByClassName('flow')
-                for (var i = 0, l = elements.length; i < l; i++) {
-                    // only get the first one in the array, because the previous one has been removed or replaced
-                    var element = elements[0]
-                    var code = element.innerText
-                    var chart = flowchart.parse(code)
-
-                    // Create a new div for displaying chart
-                    var div_new = document.createElement('div')
-                    var div_new_id = 'flowchart_' + i
-                    div_new.setAttribute('id', div_new_id)
-                    element.parentNode.replaceChild(div_new, element)
-                    chart.drawSVG(div_new_id,{
-                        'maxWidth': 10,//ensures the flowcharts fits within a certian width
-                        //'scale':0.8
-                    })
-                    }
-			});
-		});
-	</script>
-
-	<!-- Mermaid add-on -->
-	<script src="mermaid/mermaid.js"></script>
+    <!-- Mermaid add-on -->
+	<script src="modules/mermaid/mermaid.js"></script>
 	<script>mermaid.initialize({startOnLoad:true,theme:'forest'});</script>
-    
+
+    <!-- Prism HighLight -->
+    <link rel="stylesheet" media="all" href="modules/prism/prism.css">
+    <script src="modules/prism/prism.js"></script> 
+
+    <script type="text/javascript" src="customjs.js"></script>
 </head>
-<body data-document>&nbsp;</body>
+<body data-document>&nbsp;
+    <pre><code class="language-python">
+        import numpy as np  
+        import pandas as pd
+
+        # Leer CSV
+        df = pd.read_csv("hola.csv")
+        
+        if a > b: # This is a comment
+            pass
+        
+        if a > b: # This is a comment
+            pass
+        </code>
+        </pre>
+    
+</body>
 </html>
