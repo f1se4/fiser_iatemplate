@@ -12,35 +12,64 @@
 <!--     <script src="modules/sequence/jquery.min.js"></script> -->
 
     <!-- Flow chart support -->
-<!--     <script type="text/javascript" src="modules/snap.svg/snap.svg-min.js"></script>
+    <script type="text/javascript" src="modules/snap.svg/snap.svg-min.js"></script>
     <script type="text/javascript" src="modules/raphael/raphael.min.js"></script>
-    <script type="text/javascript" src="modules/flowchart/flowchart.min.js"></script> -->
+    <script type="text/javascript" src="modules/flowchart/flowchart.min.js"></script>
 
     <!-- Mermaid add-on -->
 	<script src="modules/mermaid/mermaid.js"></script>
 	<script>mermaid.initialize({startOnLoad:true,theme:'forest'});</script>
 
+    <!-- Chart JS -->
+    <script src="modules/chartjs/chart.js"></script>
+
     <!-- Prism HighLight -->
     <link rel="stylesheet" media="all" href="modules/prism/prism.css">
     <script src="modules/prism/prism.js"></script> 
 
-    <script type="text/javascript" src="customjs.js"></script>
+    <script type="text/javascript" src="modules/customjs.js"></script>
 </head>
 <body data-document>&nbsp;
-    <pre><code class="language-python">
-        import numpy as np  
-        import pandas as pd
+    <pre>
+<code class="chartjs">
+    {
+        "type": "pie",
+        "data": {
+          "labels": [
+            "Red",
+            "Blue",
+            "Yellow"
+          ],
+          "datasets": [
+            {
+              "data": [
+                300,
+                50,
+                100
+              ],
+              "backgroundColor": [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+              ],
+              "hoverBackgroundColor": [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+              ]
+            }
+          ]
+        },
+        "options": {}
+      }
+</code>
+    </pre>
 
-        # Leer CSV
-        df = pd.read_csv("hola.csv")
-        
-        if a > b: # This is a comment
-            pass
-        
-        if a > b: # This is a comment
-            pass
-        </code>
+**************************************************************
+
+<pre>
+    <canvas id="myChart" width="400" height="400"></canvas>
         </pre>
-    
+
 </body>
 </html>

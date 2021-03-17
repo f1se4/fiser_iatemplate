@@ -22,26 +22,26 @@
 
 window.addEventListener('load', function() {
 
-    var $ = function(selector, context) {
-        return (context || document).querySelector(selector)
-    }
+    var processChart = function() {
+        var elements = document.getElementsByClassName('chartgraf')
+        for (var i = 0, l = elements.length; i < l; i++) {
+            // only get the first one in the array, because the previous one has been removed or replaced
+            var element = elements[0]
+            var source = element.textContent.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ');
 
-    var $$ = function(selector, context) {
-        return (context || document).querySelectorAll(selector)
-    }
+            // Create a new div for displaying chart
+            var can_new = document.createElement('CANVAS')
+            var can_new_id = 'chartgraf_' + i
+            can_new.setAttribute('id', can_new_id)
+            element.parentNode.replaceChild(can_new, element)
 
-    // processHighlight
-    hljs.highlightAll()
-
-/*     function processHighlight() {
-        var blocks = $$('pre > code')
-        for (var i = 0; i < blocks.length; i++) {
-            hljs.highlightBlock(blocks[i])
+            //Generate Graphic
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var mychart = new Chart(ctx, JSON.parse(source.trim()));
         }
-    } */
-
+    }
     var processFlowchart = function() {
-        var elements = document.getElementsByClassName('flow hljs')
+        var elements = document.getElementsByClassName('flow')
         for (var i = 0, l = elements.length; i < l; i++) {
             // only get the first one in the array, because the previous one has been removed or replaced
             var element = elements[0]
@@ -53,57 +53,19 @@ window.addEventListener('load', function() {
             var div_new_id = 'flowchart_' + i
             div_new.setAttribute('id', div_new_id)
             element.parentNode.replaceChild(div_new, element)
-            chart.drawSVG(div_new_id)
+            chart.drawSVG(div_new_id,{
+                'maxWidth': 10,//ensures the flowcharts fits within a certian width
+                //'scale':0.8
+            })
         }
     }
-
-    var processTags = function() {
-        var element = document.getElementsByTagName('p')[0]
-        var title = ''
-        var tags = []
-
-        if (element) {
-            if (element.innerText.match(/^@\((.*)\)\[.+\]/)) {
-                title = element.innerText.match(/\((.*)\)/)
-                if (title.length == 2) {
-                    title = title[1]
-                } else {
-                    title = ''
-                }
-
-                // Process tags
-                tags = element.innerText.match(/\[(.*?)\]/)
-                if (tags.length == 2) {
-                    tags = tags[1]
-                    tags = tags.split('|')
-                }
-
-                var p = document.createElement('p')
-                p.setAttribute('class', 'note-tags ')
-
-                var code_title = document.createElement('code')
-                code_title.setAttribute('class', 'notebook')
-                code_title.innerHTML = title
-                p.appendChild(code_title)
-
-                for (var i = 0, l = tags.length; i < l; i++) {
-                    var code_tag = document.createElement('code')
-                    code_tag.innerHTML = tags[i]
-                    p.appendChild(document.createTextNode(' '))
-                    p.appendChild(code_tag)
-                }
-
-                element.parentNode.replaceChild(p, element)
-            }
-        }
-    }
-
     var refresh = function() {
-        //processHighlight()
         processFlowchart()
-        processTags()
+        processChart()
     }
     //refresh()
     document.body.addEventListener('ia-writer-change', refresh)
     refresh()
-})
+},
+    false // Wait 
+);

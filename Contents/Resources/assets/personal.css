@@ -1,27 +1,27 @@
 table {
-    border: solid 1px #DDEEEE;
+    border: solid 1px #b6cada;
     border-collapse: collapse;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
 }
 table thead th {
-    background-color: #DDEFEF;
-    border: solid 1px #DDEEEE;
-    color: #336B6B;
+    background-color: #b6cada;
+    border: solid 1px #b6cada;
+    color: #f4dbb3;
     padding: 10px;
     text-align: left;
     text-shadow: 1px 1px 1px #fff;
 }
 table tbody td {
-    border: solid 1px #DDEEEE;
+    border: solid 1px #b6cada;
     color: #333;
     padding: 10px;
     text-shadow: 1px 1px 1px #fff;
 }
 
   blockquote {
-	background:		#f9f9f9;
-	border-left:	10px solid #ccc;
+	background:		#b6cada;
+	border-left:	10px solid #638cc7;
 	margin:			1.5em 10px;
 	padding:		.5em 10px;
 }
