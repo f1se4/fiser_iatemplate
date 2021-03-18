@@ -1,23 +1,49 @@
 table {
-    border: solid 1px #b6cada;
+    border:none !important;
     border-collapse: collapse;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
 }
-table thead th {
-    background-color: #b6cada;
-    border: solid 1px #b6cada;
-    color: #f4dbb3;
+table thead {
+    border-radius: 4px;
+    background-color: #638cc7;
+    border: none !important; 
+    border-collapse: collapse;
+    color: white;
     padding: 10px;
-    text-align: left;
-    text-shadow: 1px 1px 1px #fff;
+    text-align: center;
+    /* text-shadow: 1px 1px 1px #fff; */
+}
+table thead th {
+    background-color: #638cc7;
+    border: none !important; 
+    border-collapse: collapse;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    /* text-shadow: 1px 1px 1px #fff; */
 }
 table tbody td {
-    border: solid 1px #b6cada;
+    border: none !important; 
+    border-collapse: collapse;
     color: #333;
     padding: 10px;
     text-shadow: 1px 1px 1px #fff;
 }
+table tbody {
+    border: none !important; 
+    border-collapse: collapse;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #b6cada;
+    color: #d5e3ee;
+ }
+
+/* Block Quote customizing */
 
   blockquote {
 	background:		#b6cada;
@@ -28,5 +54,3 @@ table tbody td {
 blockquote p {
 	display:		inline;
 }
-
-

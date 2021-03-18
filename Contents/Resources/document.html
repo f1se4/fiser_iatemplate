@@ -8,9 +8,6 @@
     <link rel="stylesheet" media="all" href="assets/personal.css">      
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
 
-    <!-- Jquery always the first -->
-<!--     <script src="modules/sequence/jquery.min.js"></script> -->
-
     <!-- Flow chart support -->
     <script type="text/javascript" src="modules/snap.svg/snap.svg-min.js"></script>
     <script type="text/javascript" src="modules/raphael/raphael.min.js"></script>
@@ -18,10 +15,12 @@
 
     <!-- Mermaid add-on -->
 	<script src="modules/mermaid/mermaid.js"></script>
-	<script>mermaid.initialize({startOnLoad:true,theme:'forest'});</script>
+	<script>mermaid.initialize({startOnLoad:true,theme:"forest"});</script>
 
-    <!-- Chart JS -->
+    <!-- Graphic Libraries -->
     <script src="modules/chartjs/chart.js"></script>
+    <script src="modules/chartist/chartist.min.js"></script>
+    <link rel="stylesheet" href="modules/chartist/chartist.min.css">
 
     <!-- Prism HighLight -->
     <link rel="stylesheet" media="all" href="modules/prism/prism.css">
@@ -29,47 +28,5 @@
 
     <script type="text/javascript" src="modules/customjs.js"></script>
 </head>
-<body data-document>&nbsp;
-    <pre>
-<code class="chartjs">
-    {
-        "type": "pie",
-        "data": {
-          "labels": [
-            "Red",
-            "Blue",
-            "Yellow"
-          ],
-          "datasets": [
-            {
-              "data": [
-                300,
-                50,
-                100
-              ],
-              "backgroundColor": [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
-              ],
-              "hoverBackgroundColor": [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
-              ]
-            }
-          ]
-        },
-        "options": {}
-      }
-</code>
-    </pre>
-
-**************************************************************
-
-<pre>
-    <canvas id="myChart" width="400" height="400"></canvas>
-        </pre>
-
-</body>
+<body data-document>&nbsp;</body>
 </html>

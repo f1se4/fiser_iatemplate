@@ -23,7 +23,7 @@
 	<key>IATemplateHeaderFile</key>
 	<string>header</string>
 	<key>IATemplateHeaderHeight</key>
-	<integer>90</integer>
+	<integer>60</integer>
 	<key>IATemplateTitleFile</key>
 	<string>title</string>
 </dict>
