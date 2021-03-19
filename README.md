@@ -6,7 +6,7 @@ I have created this template for personal use.
 - Math Latex Syntax (native in iawriter 5)
 - Chartist - only Bars at the moment
 - Chart.js
-- Plotly.js
+- Plotly.js - only line at the moment
 
 ## Other features
 - Nice Title Page

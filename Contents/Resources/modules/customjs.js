@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
 
     var processCharlist = function() {
-        var elements = document.getElementsByClassName('chartist')
+        var elements = document.getElementsByClassName('chart-chartist')
         for (var i = 0, l = elements.length; i < l; i++) {
             // only get the first one in the array, because the previous one has been removed or replaced
             var element = elements[0]
@@ -11,8 +11,8 @@ window.addEventListener('load', function() {
             //console.log(source)
             // Create a new div for displaying chart
             var div_new = document.createElement('div')
-            var div_new_id = 'chartist_' + i
-            var dot_new_id = '.chartist_' + i
+            var div_new_id = 'chart-chartist_' + i
+            var dot_new_id = '.chart-chartist_' + i
             div_new.setAttribute('id', div_new_id)
             div_new.setAttribute('class', div_new_id)
             element.parentNode.replaceChild(div_new, element)
@@ -22,7 +22,7 @@ window.addEventListener('load', function() {
         }   
     }
     var processPlotly = function() {
-        var elements = document.getElementsByClassName('plotly')
+        var elements = document.getElementsByClassName('chart-plotly')
         for (var i = 0, l = elements.length; i < l; i++) {
             // only get the first one in the array, because the previous one has been removed or replaced
             var element = elements[0]
@@ -31,18 +31,16 @@ window.addEventListener('load', function() {
             var source = JSON.parse(source_raw)
             // Create a new div for displaying chart
             var div_new = document.createElement('div')
-            var div_new_id = 'plotly_' + i
+            var div_new_id = 'chart-plotly_' + i
             div_new.setAttribute('id', div_new_id)
             element.parentNode.replaceChild(div_new, element)
 
             //Generate Graphic
-            Plotly.newPlot( div_new, [source], {
-                margin: { t: 0 } 
-              } )     
+            Plotly.newPlot( div_new, source)     
         }   
     }
     var processChart = function() {
-        var elements = document.getElementsByClassName('chartgraf')
+        var elements = document.getElementsByClassName('chart-chartjs')
         for (var i = 0, l = elements.length; i < l; i++) {
             // only get the first one in the array, because the previous one has been removed or replaced
             var element = elements[0]
@@ -50,7 +48,7 @@ window.addEventListener('load', function() {
 
             // Create a new div for displaying chart
             var can_new = document.createElement('CANVAS')
-            var can_new_id = 'chartgraf_' + i
+            var can_new_id = 'chart-chartjs_' + i
             can_new.setAttribute('id', can_new_id)
             element.parentNode.replaceChild(can_new, element)
 
