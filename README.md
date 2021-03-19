@@ -13,6 +13,10 @@ I have created this template for personal use.
 - Some changes over footer page adding full line
 - Customized Zebra blue table
 
+## Installation 
+Download last release with your Ipad and IA Writter application (if not unzip and an open the .iatemplate file)
+
+[Release v1](https://github.com/f1se4/fiser_iatemplate/releases/download/v1.0/fiser.iatemplate.zip)
 
 ## Output
 
