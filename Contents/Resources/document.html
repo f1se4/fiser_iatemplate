@@ -24,6 +24,8 @@
     <script src="modules/chartjs/chart.js"></script>
     <script src="modules/chartist/chartist.min.js"></script>
     <link rel="stylesheet" href="modules/chartist/chartist.min.css">
+    <script src="modules/plotly/plotly-latest.min.js"></script>
+
 
     <!-- Prism HighLight -->
     <link rel="stylesheet" media="all" href="modules/prism/prism.css">
@@ -59,6 +61,7 @@
     cond(yes@translator)->subt->op->io->e
   </code></pre>
   <br>
+  <h2>Chart.js</h2>
   <pre><code class="chartgraf">
 	  {
     type: "line",
@@ -74,5 +77,14 @@
     options: {}
 }
   </code></pre>
+  <h2>Plotly</h2>
+  <pre>
+    <code class="plotly">
+      {
+        x: [1, 2, 3, 4, 5],
+        y: [1, 2, 4, 8, 16] 
+      }
+    </code>
+  </pre>
 </body>
 </html>

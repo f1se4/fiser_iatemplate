@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
             var source_raw = element.textContent.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ');
 
             var source = JSON.parse(source_raw)
-            console.log(source)
+            //console.log(source)
             // Create a new div for displaying chart
             var div_new = document.createElement('div')
             var div_new_id = 'chartist_' + i
@@ -21,7 +21,26 @@ window.addEventListener('load', function() {
             new Chartist.Bar(dot_new_id, source);     
         }   
     }
+    var processPlotly = function() {
+        var elements = document.getElementsByClassName('plotly')
+        for (var i = 0, l = elements.length; i < l; i++) {
+            // only get the first one in the array, because the previous one has been removed or replaced
+            var element = elements[0]
+            var source_raw = element.textContent.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ');
 
+            var source = JSON.parse(source_raw)
+            // Create a new div for displaying chart
+            var div_new = document.createElement('div')
+            var div_new_id = 'plotly_' + i
+            div_new.setAttribute('id', div_new_id)
+            element.parentNode.replaceChild(div_new, element)
+
+            //Generate Graphic
+            Plotly.newPlot( div_new, [source], {
+                margin: { t: 0 } 
+              } )     
+        }   
+    }
     var processChart = function() {
         var elements = document.getElementsByClassName('chartgraf')
         for (var i = 0, l = elements.length; i < l; i++) {
@@ -40,6 +59,8 @@ window.addEventListener('load', function() {
             mychart = new Chart(ctx, JSON.parse(source.trim()));
         }
     }
+
+    // FlowChart included but conflicts with Chartist
     var processFlowchart = function() {
         var elements = document.getElementsByClassName('flow')
         for (var i = 0, l = elements.length; i < l; i++) {
@@ -62,6 +83,7 @@ window.addEventListener('load', function() {
     var refresh = function() {
         processChart()
         processCharlist()
+        processPlotly()
         processFlowchart()
     }
     //refresh()

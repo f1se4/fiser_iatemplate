@@ -28,14 +28,14 @@ table tbody td {
     border-collapse: collapse;
     color: #333;
     padding: 10px;
-    text-shadow: 1px 1px 1px #fff;
+    /* text-shadow: 1px 1px 1px #fff; */
 }
 table tbody {
     border: none !important; 
     border-collapse: collapse;
     color: #333;
     padding: 10px;
-    text-shadow: 1px 1px 1px #fff;
+    /* text-shadow: 1px 1px 1px #fff; */
 }
 
 tr:nth-child(even) {

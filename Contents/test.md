@@ -162,7 +162,14 @@ sequenceDiagram
       ]
     }
 ```
-
+### Plotly.js
+```plotly
+{
+  x: [1, 2, 3, 4, 5],
+  y: [1, 2, 4, 8, 16] 
+}
+```
+<!-- 
 ### Flowchart.js
 [Flowchart Home Page](https://flowchart.js.org/)
 
@@ -179,3 +186,4 @@ sequenceDiagram
     cond(no@client)->subc->op->io->e
     cond(yes@translator)->subt->op->io->e
 ```
+-->
