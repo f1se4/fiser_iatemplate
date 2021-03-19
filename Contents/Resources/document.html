@@ -8,6 +8,9 @@
     <link rel="stylesheet" media="all" href="assets/personal.css">      
     <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
 
+    <!-- Jquery utility tool -->
+    <!--<script src="modules/jquery/jquery.min.js"></script>-->
+
     <!-- Flow chart support -->
     <script type="text/javascript" src="modules/snap.svg/snap.svg-min.js"></script>
     <script type="text/javascript" src="modules/raphael/raphael.min.js"></script>
@@ -28,5 +31,32 @@
 
     <script type="text/javascript" src="modules/customjs.js"></script>
 </head>
-<body data-document>&nbsp;</body>
+<body data-document>&nbsp;
+  <h1>TESTING</h1>
+  <h2>Chartist</h2>
+  <pre><code class="chartist">
+    {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      series: [
+        [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+        [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+      ]
+    }
+  </code></pre>
+  <h2>flowchart</h2>
+  <pre><code class="flow">
+    st=>start: Need something to be translated!:>https://www.localistars.com[blank]
+    e=>end: Be happy!:>https://youtu.be/e6Ede8hdU8c
+    cond=>condition: Are you a client
+    or a translator?
+    subc=>subroutine: Why should you choose a localistar?:>https://www.localistars.com/for-clients.html
+    subt=>subroutine: Why should you become a localistar?:>https://www.localistars.com/for-translators.html
+    op=>operation: Check out how it works!:>https://www.localistars.com/how-it-works.html
+    io=>inputoutput: Work together with your partner!:>https://www.localistars.app/login
+    
+    st->cond
+    cond(no@client)->subc->op->io->e
+    cond(yes@translator)->subt->op->io->e
+  </code></pre>
+</body>
 </html>

@@ -90,5 +90,5 @@ window.addEventListener('load', function() {
     document.body.addEventListener('ia-writer-change', refresh)
     refresh()
 },
-    false // Wait 
+    true // Wait 
 );
