@@ -1,25 +1,3 @@
-/* document.addEventListener("DOMContentLoaded", function(){
-    document.body.addEventListener('ia-writer-change', function(event) {
-        var elements = document.getElementsByClassName('flow')
-        for (var i = 0, l = elements.length; i < l; i++) {
-            // only get the first one in the array, because the previous one has been removed or replaced
-            var element = elements[0]
-            var code = element.innerText
-            var chart = flowchart.parse(code)
-
-            // Create a new div for displaying chart
-            var div_new = document.createElement('div')
-            var div_new_id = 'flowchart_' + i
-            div_new.setAttribute('id', div_new_id)
-            element.parentNode.replaceChild(div_new, element)
-            chart.drawSVG(div_new_id,{
-                'maxWidth': 10,//ensures the flowcharts fits within a certian width
-                //'scale':0.8
-            })
-        }
-    });
-}); */
-
 window.addEventListener('load', function() {
 
     var processCharlist = function() {
@@ -45,6 +23,9 @@ window.addEventListener('load', function() {
     }
 
     var processChart = function() {
+    		// deactivate responsiveness and animation
+		graphData.options.responsive = false;
+		graphData.options.animation = false;
         var elements = document.getElementsByClassName('chartgraf')
         for (var i = 0, l = elements.length; i < l; i++) {
             // only get the first one in the array, because the previous one has been removed or replaced
