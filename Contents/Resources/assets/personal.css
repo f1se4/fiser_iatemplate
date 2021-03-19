@@ -2,7 +2,7 @@ table {
     border:none !important;
     border-collapse: collapse;
     border-spacing: 0;
-    font: normal 13px Arial, sans-serif;
+    font: normal 11px Arial, sans-serif;
 }
 table thead {
     border-radius: 4px;
@@ -21,6 +21,8 @@ table thead th {
     color: white;
     padding: 10px;
     text-align: center;
+    font: 11px Arial, sans-serif;
+    font-weight: bold;
     /* text-shadow: 1px 1px 1px #fff; */
 }
 table tbody td {

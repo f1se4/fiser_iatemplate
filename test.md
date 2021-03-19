@@ -75,11 +75,15 @@ class sergiiatemplate:
 ```
 
 ### Table
+#### Usual Table
 |Header |Column 1 | Column 2 | Column 3  | 
 |:--- |:---- |:----:| ----:|
 |1. Row| is | is | is  |
 |2. Row| left | nicely | right  |
 |3. Row| aligned | centered | aligned  | 
+
+#### CSV Table
+/example.csv
 
 ### Mathematical
 An example of math inline ${e}^{i\pi }+1=0$
@@ -114,7 +118,7 @@ sequenceDiagram
 
 [Chart.js Home page](https://www.chartjs.org/)
 
-```chartgraf
+```chart-chartjs
     {
       "type": "pie",
       "data": {
@@ -153,7 +157,7 @@ sequenceDiagram
 ### Chartist.js
 [Chartist.js home page](https://gionkunz.github.io/chartist-js/)
 
-```chartist
+```chart-chartist
     {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       series: [
@@ -163,27 +167,9 @@ sequenceDiagram
     }
 ```
 ### Plotly.js
-```plotly
+```chart-plotly
 {
   x: [1, 2, 3, 4, 5],
   y: [1, 2, 4, 8, 16] 
 }
 ```
-<!-- 
-### Flowchart.js
-[Flowchart Home Page](https://flowchart.js.org/)
-
-```flow
-    st=>start: Need something to be translated!
-    e=>end: Be happy!
-    cond=>condition: Are you a client or a translator?
-    subc=>subroutine: Why should you choose a localistar?
-    subt=>subroutine: Why should you become a localistar?
-    op=>operation: Check out how it works!
-    io=>inputoutput: Work together with your partner
-
-    st->cond
-    cond(no@client)->subc->op->io->e
-    cond(yes@translator)->subt->op->io->e
-```
--->

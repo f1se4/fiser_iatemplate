@@ -6,7 +6,7 @@ I have created this template for personal use.
 - Math Latex Syntax (native in iawriter 5)
 - Chartist - only Bars at the moment
 - Chart.js
-- Plotly.js - only line at the moment
+- Plotly.js
 
 ## Other features
 - Nice Title Page
@@ -14,5 +14,19 @@ I have created this template for personal use.
 - Customized Zebra blue table
 
 
+## Output
 
-[Markdown Test Page](https://raw.githubusercontent.com/f1se4/fiser_iatemplate/master/Contents/test.md)
+### Raw data
+[Markdown Test Page](https://raw.githubusercontent.com/f1se4/fiser_iatemplate/master/test.md)
+
+### Images of the output
+![1](test-1.jpg)
+![2](test-2.jpg)
+![3](test-3.jpg)
+![4](test-4.jpg)
+![5](test-5.jpg)
+![6](test-6.jpg)
+![7](test-7.jpg)
+![8](test-8.jpg)
+
+
