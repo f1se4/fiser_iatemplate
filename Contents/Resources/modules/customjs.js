@@ -33,7 +33,13 @@ window.addEventListener('load', function() {
             var div_new = document.createElement('div')
             var div_new_id = 'chart-plotly_' + i
             div_new.setAttribute('id', div_new_id)
-            element.parentNode.replaceChild(div_new, element)
+            element.parentNode.replaceChild(div_new, element, [{  margin: {
+				l: 50,
+				r: 20,
+				t: 20,
+				b: 50,
+				pad: 0
+	}}])
 
             //Generate Graphic
             Plotly.newPlot( div_new, source)     

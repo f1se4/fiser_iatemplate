@@ -476,13 +476,13 @@ kbd {
 /* Print styles */
 @media print {
 
-  /*  *,
+  *,
    *:before,
    *:after {
      color: #000 !important; / * black prints faster * /
      box-shadow: none !important;
      text-shadow: none !important;
-   } */
+   }
  
    html {
      margin: 0; /* Override for safety */
@@ -502,7 +502,7 @@ kbd {
    }
  
    /* h6 excluded as the page-break-inside rule conflicts with page-initial inline h6 when printed */
-   h1,
+/*    h1,
    h2,
    h3,
    h4,
@@ -510,8 +510,8 @@ kbd {
    img,
    figure {
      page-break-inside: avoid;
-     page-break-after: avoid; /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=5097 */
-   }
+     page-break-after: avoid; /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=5097
+   } */
  
    p {
      /* Not supported by Webkit at time of writing, ref: https://bugs.webkit.org/show_bug.cgi?id=39735 */
