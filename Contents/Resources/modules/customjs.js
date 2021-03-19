@@ -23,9 +23,6 @@ window.addEventListener('load', function() {
     }
 
     var processChart = function() {
-    		// deactivate responsiveness and animation
-		graphData.options.responsive = false;
-		graphData.options.animation = false;
         var elements = document.getElementsByClassName('chartgraf')
         for (var i = 0, l = elements.length; i < l; i++) {
             // only get the first one in the array, because the previous one has been removed or replaced
