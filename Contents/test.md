@@ -12,6 +12,7 @@ We can also add some image ![Trek1](https://www.shareicon.net/data/48x48/2015/09
 And continue with some different ==highlights== in the text, or if you want to correct a partner, you can ~~strikethrough~~ some text.
 
 ### Horizontal Rule
+
 ---
 
 ### Lists
@@ -58,7 +59,8 @@ and it could be used, for example to represent an output from an execution in a 
 
 #### With code highlighting
 ```language-python
-#This one has "language-python" as mark up in the code block and let's format it.
+#This one has "language-python" as mark up in the code block
+#and let's format it. (be aware of wrap lines!)
 
 import numpy as np
 import pandas as pd
@@ -71,8 +73,6 @@ class sergiiatemplate:
     super():
         print("I'm python code")
 ```
-### Page break with (+ + +)
-+++
 
 ### Table
 |Header |Column 1 | Column 2 | Column 3  | 
@@ -82,9 +82,7 @@ class sergiiatemplate:
 |3. Row| aligned | centered | aligned  | 
 
 ### Mathematical
-An example of math within a paragraph --- \\({e}^{i\pi }+1=0\\)
-
-Or use dollar signs instead ${e}^{i\pi }+1=0$
+An example of math inline ${e}^{i\pi }+1=0$
 
 To show an expression by itself with double dollar:
 
@@ -96,6 +94,7 @@ This plugins are managed through code block mark-up.
 
 ### Mermaid Plugin
 [Mermaid Home Page](https://mermaid-js.github.io/mermaid/#/)
+
 ```mermaid
 graph LR
     A[Start] --> B{Is it?};

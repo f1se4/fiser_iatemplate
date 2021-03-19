@@ -60,9 +60,9 @@ window.addEventListener('load', function() {
         }
     }
     var refresh = function() {
-        processFlowchart()
         processChart()
         processCharlist()
+        processFlowchart()
     }
     //refresh()
     document.body.addEventListener('ia-writer-change', refresh)
