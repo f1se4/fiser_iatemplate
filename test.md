@@ -75,13 +75,12 @@ class sergiiatemplate:
 ```
 
 ### Table
-#### Usual Table
+#### Normal Table
 |Header |Column 1 | Column 2 | Column 3  | 
 |:--- |:---- |:----:| ----:|
 |1. Row| is | is | is  |
 |2. Row| left | nicely | right  |
 |3. Row| aligned | centered | aligned  | 
-
 #### CSV Table
 /example.csv
 
@@ -113,9 +112,7 @@ sequenceDiagram
     A->>B: I #9829; you!
     B->>A: I #9829; you #infin; times more!
 ```
-
 ### Chart.js graph
-
 [Chart.js Home page](https://www.chartjs.org/)
 
 ```chart-chartjs
@@ -168,8 +165,23 @@ sequenceDiagram
 ```
 ### Plotly.js
 ```chart-plotly
+[
 {
-  x: [1, 2, 3, 4, 5],
-  y: [1, 2, 4, 8, 16] 
+x: [1, 2, 3, 4],
+y: [10, 11, 12, 13],
+mode: "markers",
+marker: {
+size: [40, 60, 80, 100]
 }
+}
+]
+```
+
+```chart-plotly
+[
+{
+x: [1,2,3,4,5],
+y: [2,4,6,8,10]
+}
+]
 ```
